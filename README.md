@@ -7,6 +7,11 @@
   <source media="(prefers-color-scheme: light)" srcset="./assets/ascii-light.svg">
   <img src="./assets/ascii-dark.svg" alt="Orange ASCII artwork — Deus Ex Machina" width="100%">
 </picture>
+<h3 align="center">📊 My GitHub Activity</h3>
+<a href="https://github.com/midra001?tab=overview">
+  <img src="./profile-3d-contrib/profile-night-view.svg" alt="3D contribution calendar, activity radar, and repository language breakdown for midra001; refreshed daily by GitHub Actions" width="100%">
+</a>
+<p align="center"><sub>Actual GitHub data · refreshed daily · trailing year</sub></p>
 </td>
 <td width="52%" valign="top">
 <p><code>$ whoami</code></p>
