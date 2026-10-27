@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="260" viewBox="0 0 640 260" role="img" aria-label="Waiting for first GitHub Actions run. No activity data has been generated yet.">
+<rect x="1" y="1" width="638" height="258" rx="16" fill="#0d1117" stroke="#30363d"/>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+<text x="320" y="93" fill="#fc9a1f" font-size="23">Your real activity chart goes here</text>
+<text x="320" y="134" fill="#e6edf3" font-size="17">Run “Refresh GitHub Activity” in GitHub Actions.</text>
+<text x="320" y="169" fill="#8b949e" font-size="15">It will replace this panel with your actual data.</text>
+<text x="320" y="205" fill="#8b949e" font-size="14">No sample contributions or invented statistics.</text>
+</g></svg>
