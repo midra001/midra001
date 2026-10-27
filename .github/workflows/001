@@ -1,1 +1,43 @@
+name: Refresh GitHub Activity
+
+on:
+  schedule:
+    - cron: '47 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-3d-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v5
+
+      - name: Generate chart using actual GitHub data
+        # Pinned release v0.9.3 of yoshi389111/github-profile-3d-contrib.
+        uses: yoshi389111/github-profile-3d-contrib@8005d9ad4f70166f93b0e2e1b160a537bb56350b
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          MAX_REPOS: '1000'
+
+      - name: Save refreshed charts
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s profile-3d-contrib/profile-night-view.svg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- profile-3d-contrib/
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh GitHub activity charts"
+            git push
+          fi
 
