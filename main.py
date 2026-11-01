@@ -158,7 +158,7 @@ def main():
     def field(y, label, value, offset=64):
         draw.text((x, y), label, font=bitmap, fill="#67cbe7")
         draw.text((x+offset, y), str(value), font=bitmap, fill="#f4d67a")
-    for y, label, key in [(87,"OS:","os"), (105,"Host:","host"), (123,"Kernel:","kernel"), (141,"Uptime:","uptime"), (159,"IDE:","ide")]:
+    for y, label, key in [(87,"OS:","os"), (105,"Host:","host"), (123,"Kernel:","kernel"), (141,"Uptime:","uptime")]:
         field(y, label, personal[key])
     for y, label in [(213,"GitHub Stats:")]:
         draw.rectangle((x,y,x+len(label)*8,y+14), fill="#ef7e7e")
