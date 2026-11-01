@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: profile-3d-${{ github.ref }}
+  group: profile-readme
   cancel-in-progress: false
 
 jobs:
@@ -40,4 +40,3 @@ jobs:
             git commit -m "Refresh GitHub activity charts"
             git push
           fi
-
