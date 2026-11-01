@@ -182,7 +182,7 @@ def main():
         t.curr_row,
         contin=True,
     )
-    t.gen_text("", t.curr_row, count=120, contin=True)
+    t.gen_text("", t.curr_row, count=3900, contin=True)
 
     t.save_frame("preview.png")
     t.gen_gif()
