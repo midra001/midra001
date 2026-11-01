@@ -209,10 +209,10 @@ def main():
     personal = json.loads(Path("profile.json").read_text(encoding="utf-8"))
 
     try:
-        account_age = get_github_account_age(GITHUB_USERNAME)
+        uptime = get_github_account_age(GITHUB_USERNAME)
     except (requests.RequestException, KeyError, ValueError) as error:
         print(f"Could not retrieve GitHub account age: {error}")
-        account_age = "--"
+        uptime = "--"
 
     t.clear_frame()
     top_languages = [
