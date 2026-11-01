@@ -345,10 +345,6 @@ def main():
         'alt="3D contribution calendar, activity radar, and repository '
         'language breakdown for midra001; refreshed daily by GitHub Actions" '
         'width="100%">\n'
-        '</a>\n\n'
-        '<sub><i>Terminal generated using '
-        '[x0rzavi/github-readme-terminal]'
-        '(https://github.com/x0rzavi/github-readme-terminal).</i></sub>\n'
     )
 
     Path("README.md").write_text(readme_file_content, encoding="utf-8")
