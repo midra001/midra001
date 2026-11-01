@@ -165,7 +165,6 @@ def main():
         draw.text((x,y), label, font=bitmap, fill="#232a2d")
         draw.text((x,y+18), "--------------", font=bitmap, fill="#dadada")
     rows = [
-        ("User Rating:", git_user_details.user_rank.level),
         ("Total Stars Earned:", git_user_details.total_stargazers),
         (f"Total Commits ({int(year_now)-1}):", git_user_details.total_commits_last_year),
         ("Total PRs:", git_user_details.total_pull_requests_made),
