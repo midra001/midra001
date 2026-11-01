@@ -1,6 +1,5 @@
 {
   "os": "XypherOS",
   "host": "xypher",
-  "kernel": "6.12.11-xph",
-  "uptime": "5 hours"
+  "kernel": "6.12.11-xph"
 }
