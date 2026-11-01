@@ -1,0 +1,1 @@
+github-readme-terminal @ git+https://github.com/x0rzavi/github-readme-terminal.git@09333eace9e35c6d7705f92f5e669810e82283d1
