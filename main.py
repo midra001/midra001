@@ -33,7 +33,6 @@ def get_github_account_age(username):
     created_at = datetime.fromisoformat(
         response.json()["created_at"].replace("Z", "+00:00")
     )
-
     now = datetime.now(timezone.utc)
 
     years = now.year - created_at.year
@@ -48,10 +47,8 @@ def get_github_account_age(username):
 
     if years == 0 and months == 0:
         return "Less than 1mo"
-
     if years == 0:
         return f"{months}mo"
-
     return f"{years}y {months}mo"
 
 
@@ -70,10 +67,8 @@ def boot_banner_frame(glitch=0.0, seed=0):
 
     cell = face.getlength("█")
     line_height = round(size * 4 / 3)
-
     x_origin = (750 - max(map(len, lines)) * cell) / 2
     y_origin = (500 - len(lines) * line_height) / 2
-
     rng = random.Random(seed)
 
     for row, line in enumerate(lines):
@@ -83,7 +78,6 @@ def boot_banner_frame(glitch=0.0, seed=0):
         for col, char in enumerate(line):
             if char == " ":
                 continue
-
             if glitch and rng.random() < glitch:
                 char = rng.choice("█▓▒░╬╳")
 
@@ -129,7 +123,6 @@ def main():
 
     for i in range(0, 65653, 7168):
         t.delete_row(7)
-
         if i < 30000:
             t.gen_text(f"Memory Test: {i}", 7, count=2, contin=True)
         else:
@@ -228,7 +221,6 @@ def main():
     t.delete_row(1, prompt_col)
     t.gen_text("\x1b[92mfetch.sh\x1b[0m", 1, contin=True)
     t.gen_typing_text(" -u midra001", 1, contin=True)
-
     t.toggle_show_cursor(False)
 
     lines = Path("ascii.txt").read_text(encoding="utf-8").splitlines()
@@ -285,7 +277,7 @@ def main():
         (87, "OS:", personal.get("os", "--")),
         (105, "Host:", personal.get("host", "--")),
         (123, "Kernel:", personal.get("kernel", "--")),
-        (141, "Account Age:", account_age),
+        (141, "Uptime:", uptime),
     ]
 
     for y, label, value in system_fields:
@@ -353,4 +345,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
